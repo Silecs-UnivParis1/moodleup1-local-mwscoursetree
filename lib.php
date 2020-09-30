@@ -91,7 +91,7 @@ class course_tree {
         switch ($this->get_pseudopath_level()) {
             case self::LEVEL_CATEGORY:
                 // CASE 1 node=category and children=categories
-                $categories = coursecat::get($this->parentcatid)->get_children();
+                $categories = core_course_category::get($this->parentcatid)->get_children();
                 $result = $this->get_entries_from_categories($categories);
                 break;
             case self::LEVEL_CATEGORY_AND_ROF:
