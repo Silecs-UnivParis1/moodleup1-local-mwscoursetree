@@ -7,7 +7,7 @@
     var ieWait = 2; // number of scripts, for IE < 9
 
     if (window.jQuery === undefined) {
-        loadJs(rootUrl + "../jquery/jquery.js", false);
+        loadJs(rootUrl + "../jquery/jquery-moodle.js", false);
         loadJs(rootUrl + "assets/tree.jquery.js", true);
     } else if (window.jQuery.fn.tree === undefined) {
         ieWait--;
@@ -30,7 +30,19 @@
         var script_tag = document.createElement('script');
         script_tag.setAttribute("type","text/javascript");
         script_tag.setAttribute("src", url);
-        (document.getElementsByTagName("head")[0] || document.documentElement).appendChild(script_tag);
+        
+        if (last) {
+			var a = setInterval( function() {
+				if ( typeof window.jQuery === 'undefined' ) {
+					return;
+				}
+				clearInterval(a);
+				(document.getElementsByTagName("head")[0] || document.documentElement).appendChild(script_tag);
+			}, 500 );			
+		} else {
+			(document.getElementsByTagName("head")[0] || document.documentElement).appendChild(script_tag);
+		}
+		  
         if (last) {
             if (script_tag.readyState) { // IE < 9
                 script_tag.onreadystatechange = function () {
