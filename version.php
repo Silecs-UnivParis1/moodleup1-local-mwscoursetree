@@ -8,8 +8,8 @@
 
 defined('MOODLE_INTERNAL') || die();
 
-$plugin->version   = 2013021500;        // The current plugin version (Date: YYYYMMDDXX)
-$plugin->requires  = 2020100300;        // Requires this Moodle version
+$plugin->version   = 2020100300;        // The current plugin version (Date: YYYYMMDDXX)
+$plugin->requires  = 2020060900;        // Requires this Moodle version
 $plugin->component = 'local_mwscoursetree';  // Full name of the plugin (used for diagnostics)
 
 $plugin->dependencies = [
