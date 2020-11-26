@@ -1,18 +1,16 @@
 <?php
-// This file is part of a plugin for Moodle - http://moodle.org/
-
 /**
- * @package    local
- * @subpackage mwscoursetree
- * @copyright  2014 Silecs {@link http://www.silecs.info/societe}
+ * @package    local_mwscoursetree
+ * @copyright  2014-2020 Silecs {@link http://www.silecs.info/societe}
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
+
+use \local_coursehybridtree\CourseHybridTree;
 
 define('CLI_SCRIPT', true);
 
 require(dirname(dirname(dirname(__DIR__))).'/config.php'); // global moodle config file.
 require_once($CFG->libdir.'/clilib.php');      // cli only functions
-require_once(dirname(dirname(__DIR__)) . '/coursehybridtree/locallib.php');
 
 
 // now get cli options

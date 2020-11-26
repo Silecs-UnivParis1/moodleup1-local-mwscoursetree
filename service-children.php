@@ -1,8 +1,8 @@
 <?php
+use \local_coursehybridtree\CourseHybridTree;
 
 define('NO_OUTPUT_BUFFERING', true);
 require('../../config.php');
-require_once(dirname(__DIR__) . '/coursehybridtree/locallib.php');
 
 $PAGE->set_context(context_system::instance());
 
