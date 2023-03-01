@@ -25,7 +25,10 @@ echo $OUTPUT->header();
 echo $OUTPUT->heading("Démo de l'arbre des cours");
 
 echo "<p>Cette page affiche par défaut un arbre partant de la racine <b>/cat0</b>.";
-echo "Vous pouvez modifier la racine en ajoutant à l'URL <b>?node=/cat1</b> par exemple. </p>";
+echo "Vous pouvez modifier la racine en ajoutant à l'URL <b>?node=/cat1</b> par exemple. 
+<br/>Si vous voulez afficher un arbre au dela de la catégorie Moodle de niveau 4 (niveau LMDA), il faut aussi indiquer le chemin ROFid en le modifiant.
+<br/>Obtenir par exemple le sous-arbre du chemin ROF <b>/09/UP1-PROG-09-L2J201-114</b> :
+<br/>?node=<b>/cat542/09:UP1-PROG-09-L2J201-114</b>, cat542 étant la catégorie moodle de nieau 4.</p>";
 echo "Vous pouvez préciser les paramètres <b>debug=0|1</b> (infos complémentaires) et <b>stats=0|1</b> (affichage des stats gestionnaire). </p>";
 ?>
 
